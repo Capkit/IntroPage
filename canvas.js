@@ -25,7 +25,6 @@ var colorArray = [
 window.addEventListener('mousemove', function(event) {
 	mouse.x = event.x;
 	mouse.y = event.y;
-	console.log(mouse);
 })
 
 
@@ -47,7 +46,6 @@ this.draw = function() {
 	}
 
 this.update = function() {	
-	this.draw();
 	if (this.x + this.radius > canvas.width|| this.x - this.radius < 0) {
 	this.dx = -this.dx;
 	} 
@@ -63,11 +61,10 @@ this.update = function() {
 	if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
 		if(this.radius < maxRadius) {
 		this.radius += 1;
-		}
-	} else if (this.radius > minRadius){
+		} else if (this.radius > minRadius){
 	this.radius -= 1;
 	}
-}
+		this.draw();
 }
 
 var circleArray = [];
