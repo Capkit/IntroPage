@@ -67,6 +67,7 @@ this.update = function() {
 	this.draw();
 	}
 }
+}
 
 var circleArray = [];
 
