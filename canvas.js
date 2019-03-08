@@ -11,7 +11,7 @@ var mouse = {
 }
 
 var maxRadius = 50;
-//var minRadius = 2;
+var minRadius = 2;
 
 var colorArray = [
 	'#ff6600',
@@ -34,7 +34,6 @@ function Circle (x, y, radius, dx, dy) {
 	this.radius = radius;
 	this.dx = dx;
 	this.dy = dy;
-	this.minRadius = radius;
 	this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
 
 this.draw = function() {
@@ -62,7 +61,7 @@ this.update = function() {
 	if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
 		if(this.radius < maxRadius) {
 		this.radius += 1;
-		} else if (this.radius > this.minRadius){
+		} else if (this.radius > minRadius){
 	this.radius -= 1;
 	}		
 	this.draw();
