@@ -1,4 +1,4 @@
-
+//The code implementing ideas from @ChrisCourses js tutorials
 
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
@@ -160,7 +160,7 @@ function animate() {
 //	backgroundStar.draw();
 //	})
 
- //   createMountain(1, 200, '#ffa35e');
+   createMountain(1, 200, '#ffa35e');
 
     stars.forEach((star, index) => {
 	star.update();
