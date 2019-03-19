@@ -155,6 +155,11 @@ function animate() {
     requestAnimationFrame(animate);
     c.fillStyle = backgroundGrad;
     c.fillRect(0, 0, canvas.width, canvas.height);
+	
+    c.font = '150px Calibri Light';
+    c.fillStyle = 'white';
+    c.fillText('PepperWrapper', canvas.width/2, canvas.height/2);
+    c.textAlign = 'center';
 
 //   backgroundStars.forEach(backgroundStar => {
 //	backgroundStar.draw();
