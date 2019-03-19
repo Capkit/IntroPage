@@ -186,7 +186,7 @@ function animate() {
     if(ticker % fallingRate == 0) {
 	const x = Math.random() * canvas.width;
 	stars.push(new Star(x, -100, 12, 'white'));
-	fallingRate = randomIntFromRange(80, 200);	
+	fallingRate = randomIntFromRange(120, 200);	
 	}
 	
 }
