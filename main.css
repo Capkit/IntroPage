@@ -8,7 +8,8 @@
 }
 
 .top-header-content {
-  background: rgb(112, 196, 56, .6);
+  background: rgba(61, 65, 71, .5);
+;
   height: 9rem;
   border-bottom: 1px solid black;
 }
@@ -22,9 +23,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-nav ul {
-
-}
 
 nav a {
   text-decoration: none;
@@ -54,7 +52,7 @@ nav a {
 .profile-card-content {
   font-family: 'Inconsolata', monospace, 'Arial';
   font-size: 1.5rem;
-   background: url('https://imgur.com/UQWDzaE.jpg')  no-repeat 70% center/cover;
+   background: url('https://imgur.com/UQWDzaE.jpg')  no-repeat 60% center/cover;
   background-size: cover;
   display: flex;
   text-align: center;
@@ -104,7 +102,7 @@ nav a {
 @media (min-width: 445px) {
 
   .top-header-content {
-    height: 4.3rem;
+    height: 5rem;
   }
   
   nav {
