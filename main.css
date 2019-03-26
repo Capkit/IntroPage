@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+/* HEADER STYLES */
+.header-content {
+  margin: 0;
+}
+
+.top-header-content {
+  background: rgb(112, 196, 56, .6);
+  height: 9rem;
+  border-bottom: 1px solid black;
+}
+
+h1 {
+  font-family: 'Poiret One', cursive, 'arial';
+  font-size: 1.5rem;
+  height: 3.5rem;
+  text-align: center;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+
+}
+
+nav a {
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  color: #000000;
+  padding: .5rem 1rem;
+  display: block;
+}
+
+.nav-menu {
+  border: 1px solid hsla(0,0%,100%,.2);
+  border-radius: 9999px;
+}
+
+
+.nav-menu:hover {
+  color: #ffffff;
+  background: #878479;
+  transition: color .30s ease-in-out;
+}
+
+.nav-home:hover {
+  color: #ffffff;
+}
+
+.profile-card-content {
+  font-family: 'Inconsolata', monospace, 'Arial';
+  font-size: 1.5rem;
+   background: url('https://imgur.com/UQWDzaE.jpg')  no-repeat 70% center/cover;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.profile-card {
+  background: orange;
+  width: 450px;
+  height: 15rem;
+  max-width: calc(100vw - 10px);
+  margin-bottom: 3rem;
+  background-color: hsla(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: hsla(0, 0%, 0%, .8) 5px 5px 10px;
+}
+
+
+
+.profile-image {
+  height: 6rem;  
+  width: 6rem;
+  border-radius: 50%;
+  margin-top: -30px;
+  padding: 1px;
+  background-color: #666;
+}
+
+.profile-image:hover {
+  transform: scale(2.1);
+  transition: all 0.5s ease-in-out;
+}
+
+
+/* MAIN MENU STYLES */
+
+.main-menu img {
+  border-radius:100px;
+  padding: 1px;
+  background-color: #666;
+}
+
+
+@media (min-width: 445px) {
+
+  .top-header-content {
+    height: 4.3rem;
+  }
+  
+  nav {
+    position: fixed;
+    margin-top: 0;
+    right: 0;
+    width: 20%;
+  }
+  
+  h1 {
+   font-size: 3rem;  
+   font-family: 'Poiret One', cursive, 'Arial';
+   float: left;
+   padding: 0;
+   margin-left: 1rem;
+   margin-top: 0.5rem; 
+  }
+  
+  .profile-card {
+    height: 12rem;
+    width: 20rem;
+    margin-right: 3rem;
+  }
+}
+  /* MEDIA QUERY FOR PROFILE CARD */
+   @media (min-width: 700px) {
+    .profile-card {
+    height: 12rem;
+    margin-left: 3rem;
+  }
+}
+
+   @media (min-width: 800px) {
+    .profile-card {
+    height: 12rem;
+    margin-left: 6rem;
+  }
+}
+    
+    
+    @media (min-width: 950px) {   
+    .profile-card {
+    height: 12rem;
+    margin-left: 8rem;
+  }  
+}
+      
+    @media (min-width: 1124px) {
+     .profile-card {
+    height: 15rem;
+    margin-left: 9rem;
+  }           
+}
