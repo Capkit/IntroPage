@@ -92,10 +92,32 @@ nav a {
 
 /* MAIN MENU STYLES */
 
+.main-menu {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background: grey;
+}
+
 .main-menu img {
-  border-radius:100px;
+  border-radius:9999px;
   padding: 1px;
-  background-color: #666;
+  background-color: #c1c1c1;;
+}
+
+.menu-links {
+  padding: 2rem;
+  background: #f4f5f7;
+  max-width: 40rem;
+}
+
+.laptop-image, .skills-image, .contact-image {
+  margin: 10px;
+    max-width: 8rem;
+}
+
+.laptop-image:hover, .skills-image:hover, .contact-image:hover {
+   transform: scale(1.1);
 }
 
 
@@ -156,3 +178,5 @@ nav a {
     margin-left: 9rem;
   }           
 }
+      
+  
