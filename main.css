@@ -164,7 +164,7 @@ nav a {
   font-family: 'Inconsolata', monospace, 'Arial';
   font-size: 1.5rem;
   text-align: center;
-  border: white 1px solid;
+  border: black .5px solid;
   border-radius: 1000px;
   margin: 1.5rem 0 1.3rem;
 }
@@ -261,11 +261,18 @@ nav a {
 
 .project-section-title {
   grid-area: header;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
   height: 100%;
   width: 5vw;
-  background: white;
-  
+  background: rgb(221, 7, 7);
+  font-size: 2.5rem;
+  writing-mode: vertical-lr; 
+  transform: rotate(180deg);
+  color: white;
 }
+     
 
 .project-1 {
   grid-area: p1;
@@ -287,12 +294,17 @@ nav a {
   width: 35vw;
   border:black 3px solid;
   border-radius: 30px;
-}
+} 
+     
      
  .project-2:hover {
+   width: 33vw;
+   height: 120%;
    transform: scale(1.1);
-   transition: all 0.5s ease-in-out;    
+   transition: all 0.5s ease-in-out;  
   }   
+     
+     
 
 .project-3 {
   grid-area: p3;
@@ -304,6 +316,8 @@ nav a {
 }  
  
  .project-3:hover {
+  width: 33vw;
+  height: 120%;
   transform: scale(1.1);
   transition: all 0.5s ease-in-out;   
   }     
@@ -311,7 +325,6 @@ nav a {
  .projects-section span {
   font-size: 2rem; 
   grid-area: github-button;
-  justify-self: center; 
   }   
      
    .fa-github-square:hover {
@@ -342,5 +355,4 @@ nav a {
     margin-left: 9rem;
   }           
 }
-      
   
