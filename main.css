@@ -8,7 +8,8 @@
 }
 
 .top-header-content {
-  background: rgba(61, 65, 71, .5);
+  background: rgb(221, 7, 7);
+  width: 100vw;
 ;
   height: 9rem;
   border-bottom: 1px solid black;
@@ -41,7 +42,7 @@ nav a {
 
 .nav-menu:hover {
   color: #ffffff;
-  background: #878479;
+  background: #b2b1ae;
   transition: color .30s ease-in-out;
 }
 
@@ -52,7 +53,7 @@ nav a {
 .profile-card-content {
   font-family: 'Inconsolata', monospace, 'Arial';
   font-size: 1.5rem;
-   background: url('https://imgur.com/UQWDzaE.jpg')  no-repeat 60% center/cover;
+   background: url('https://imgur.com/xovLHP8.jpg')  no-repeat 60% center/cover;
   background-size: cover;
   display: flex;
   text-align: center;
@@ -97,6 +98,7 @@ nav a {
   text-align: center;
   justify-content: center;
   background: grey;
+  width: 100vw;
 }
 
 .main-menu img {
@@ -108,18 +110,103 @@ nav a {
 .menu-links {
   padding: 2rem;
   background: #f4f5f7;
-  max-width: 40rem;
+  width: 50rem;
+  border-radius: 5px;
 }
 
+
 .laptop-image, .skills-image, .contact-image {
-  margin: 10px;
-    max-width: 8rem;
+  margin: 10px 30px;
+  max-width: 8rem;
 }
 
 .laptop-image:hover, .skills-image:hover, .contact-image:hover {
    transform: scale(1.1);
 }
 
+.motto {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Caveat', cursive, 'Arial';
+  font-size: 4rem;
+  background: grey;
+  color: white;
+  padding: 5rem;
+  text-align: center;
+}
+
+/* PROJECT SECTION STYLES */
+
+.projects-section {
+  background: grey;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 2rem 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5% 60% 20% 10% 5%;
+   grid-template-areas:
+  "header"
+  "p1"
+  "p2"
+  "p3"
+  "github-button";
+  grid-gap: 0.2%; 
+  align-items: center;
+}
+
+.project-section-title {
+  background: red;
+  grid-area: header;
+  width: 100%;
+  height: 100%;
+  font-family: 'Inconsolata', monospace, 'Arial';
+  font-size: 1.5rem;
+  text-align: center;
+  border: white 1px solid;
+  border-radius: 1000px;
+  margin: 1.5rem 0 1.3rem;
+}
+
+.project-1 {
+  grid-area: p1;
+  width: 100%;
+  height: 100%;
+  border: black 1px solid;
+  border-radius: 10px;
+  background: white;
+}
+
+.project-2 {
+  grid-area: p2;
+  width: 100%;
+  height: 100%;
+  border: black 1px solid;
+  border-radius: 10px;
+  background: white;
+}
+
+.project-3 {
+  grid-area: p3;
+  width: 100%;
+  height: 100%;
+  border: black 1px solid;
+  border-radius: 10px;
+  background: white;
+}
+
+.projects-section span {
+  grid-area: github-button;
+  justify-self: center;
+  font-family: 'Inconsolata', monospace, 'Arial';
+  font-size: .8rem;
+  margin-left: .5rem;
+}
+
+.projects-section a {
+  text-decoration: none;
+}
 
 @media (min-width: 445px) {
 
@@ -148,13 +235,89 @@ nav a {
     width: 20rem;
     margin-right: 3rem;
   }
+  .main-menu {
+    border-top: 1rem solid grey;
+  }
 }
-  /* MEDIA QUERY FOR PROFILE CARD */
+
    @media (min-width: 700px) {
     .profile-card {
     height: 12rem;
     margin-left: 3rem;
   }
+      
+  .projects-section {
+  background: grey;  
+  padding: 1rem 4rem 1rem .5rem;  
+  display: grid;
+  grid-template-columns: 5% 60% 35%;
+  grid-template-rows: 50% 40% 8%;
+  grid-gap: .5rem;
+  grid-template-areas:
+  "header p1 p2"
+  "header p1 p3"
+  "github-button github-button github-button";  
+}
+
+.project-section-title {
+  grid-area: header;
+  height: 100%;
+  width: 5vw;
+  background: white;
+  
+}
+
+.project-1 {
+  grid-area: p1;
+  height: 100%;
+  width: 60vw;
+  border: black 3px solid;
+  border-radius: 30px;
+}
+
+  .project-1:hover {
+    z-index: 1;  
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;    
+   }     
+
+.project-2 {
+  grid-area: p2;
+  height: 100%;
+  width: 35vw;
+  border:black 3px solid;
+  border-radius: 30px;
+}
+     
+ .project-2:hover {
+   transform: scale(1.1);
+   transition: all 0.5s ease-in-out;    
+  }   
+
+.project-3 {
+  grid-area: p3;
+  width: 35vw;
+  height: 100%;
+  width: 35vw;
+  border:black 3px solid;
+  border-radius: 30px;
+}  
+ 
+ .project-3:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;   
+  }     
+     
+ .projects-section span {
+  font-size: 2rem; 
+  grid-area: github-button;
+  justify-self: center; 
+  }   
+     
+   .fa-github-square:hover {
+    transform: scale(1.5);   
+   }  
+    
 }
 
    @media (min-width: 800px) {
@@ -162,6 +325,7 @@ nav a {
     height: 12rem;
     margin-left: 6rem;
   }
+    
 }
     
     
@@ -173,7 +337,7 @@ nav a {
 }
       
     @media (min-width: 1124px) {
-     .profile-card {
+    .profile-card {
     height: 15rem;
     margin-left: 9rem;
   }           
