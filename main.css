@@ -208,6 +208,12 @@ nav a {
   text-decoration: none;
 }
 
+/*Skills section stlyes */
+.skills-section {
+  height: 100vh;
+  background: pink;
+}
+
 @media (min-width: 445px) {
 
   .top-header-content {
@@ -277,7 +283,7 @@ nav a {
 .project-1 {
   grid-area: p1;
   height: 100%;
-  width: 60vw;
+  width: 56vw;
   border: black 3px solid;
   border-radius: 30px;
 }
