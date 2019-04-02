@@ -90,6 +90,14 @@ nav a {
   transition: all 0.5s ease-in-out;
 }
 
+/* Background for main-menu, motto and projects-section */
+
+.main-menu-motto-wrapper {
+ background: url('https://imgur.com/NV8br63.jpg') no-repeat center/cover;
+  width: 100vw;
+}
+
+
 
 /* MAIN MENU STYLES */
 
@@ -97,7 +105,6 @@ nav a {
   display: flex;
   text-align: center;
   justify-content: center;
-  background: grey;
   width: 100vw;
 }
 
@@ -109,7 +116,7 @@ nav a {
 
 .menu-links {
   padding: 2rem;
-  background: #f4f5f7;
+  background: url('https://imgur.com/dC1AUZo.jpg') no-repeat center/cover;
   width: 50rem;
   border-radius: 5px;
 }
@@ -124,13 +131,12 @@ nav a {
    transform: scale(1.1);
 }
 
-.motto {
-   display: flex;
+.motto { 
+  display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Caveat', cursive, 'Arial';
   font-size: 4rem;
-  background: grey;
   color: white;
   padding: 5rem;
   text-align: center;
@@ -139,28 +145,28 @@ nav a {
 /* PROJECT SECTION STYLES */
 
 .projects-section {
-  background: grey;
+  background: linear-gradient(#2d2c2c, #f7f2f2);
   width: 100vw;
   height: 100vh;
   padding: 0 2rem 0 1rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 5% 60% 20% 10% 5%;
+  grid-template-rows: 50px 200px 100px 100px 50px;
    grid-template-areas:
   "header"
   "p1"
   "p2"
   "p3"
   "github-button";
-  grid-gap: 0.2%; 
+  grid-gap: 2vh;
   align-items: center;
 }
 
 .project-section-title {
-  background: red;
+  background: #f7e3ea;
   grid-area: header;
   width: 100%;
-  height: 100%;
+  height: 70%;
   font-family: 'Inconsolata', monospace, 'Arial';
   font-size: 1.5rem;
   text-align: center;
@@ -209,10 +215,66 @@ nav a {
 }
 
 /*Skills section stlyes */
+
 .skills-section {
-  height: 100vh;
-  background: pink;
+  background: #f7f2f2;
+  height: 80rem;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 25rem 35rem 10rem;
+  justify-items: center;
+  grid-gap: .5rem;
+  padding: 2rem;
+
 }
+
+.core-skills, .learning-list, .other-interests-list {
+ text-align: center;
+}
+
+.skills-section h2, h3 {
+  font-family: 'Inconsolata', monospace, 'Arial';
+}
+.skills-section h2 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-decoration-color: #df3272;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.skills-section h3 {
+   text-align: left;
+  text-decoration: underline solid pink;
+  color: #a01042;
+}
+
+li {
+  background: white;
+  display: grid;
+  justify-items: center;
+  line-height: 1.5rem;
+}
+
+ul {
+ margin-top: 2rem 0 1rem;
+}
+
+li:hover {
+  background: #f7e3ea;
+}
+
+
+.skills-section a {
+  text-decoration: none;
+  color: #8e91a5;
+}
+
+.fa-youtube {
+  color: red;
+}
+
+
 
 @media (min-width: 445px) {
 
@@ -241,9 +303,12 @@ nav a {
     width: 20rem;
     margin-right: 3rem;
   }
-  .main-menu {
-    border-top: 1rem solid grey;
-  }
+  
+
+ .learning-list, .other-interests-list {
+    min-width: 90vw;
+ }
+  
 }
 
    @media (min-width: 700px) {
@@ -251,13 +316,12 @@ nav a {
     height: 12rem;
     margin-left: 3rem;
   }
-      
+     
   .projects-section {
-  background: grey;  
   padding: 1rem 4rem 1rem .5rem;  
   display: grid;
-  grid-template-columns: 5% 60% 35%;
-  grid-template-rows: 50% 40% 8%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-gap: .5rem;
   grid-template-areas:
   "header p1 p2"
@@ -271,13 +335,14 @@ nav a {
   align-self: center;
   text-align: center;
   height: 100%;
-  width: 5vw;
-  background: rgb(221, 7, 7);
-  font-size: 2.5rem;
+  width: 4vw;
+  background: #e57049;
+  font-size: 3.5rem;
   writing-mode: vertical-lr; 
   transform: rotate(180deg);
   color: white;
 }
+
      
 
 .project-1 {
@@ -359,6 +424,25 @@ nav a {
     .profile-card {
     height: 15rem;
     margin-left: 9rem;
-  }           
+  }    
+   .menu-links {
+   margin-top: 2rem;
+   }
+      
+    .skills-section {
+      grid-template-columns: 34vw 34vw 34vw;
+      grid-template-rows: 1fr;
+    }  
+      
+    .learning-list, .other-interests-list {
+     min-width: 20vw;
+  }
+      .learning-list h2, .other-interests-list h2 {
+        margin-bottom: 1.5rem;
+      }   
+      
+      .other-interests-list, .core-skills, .learning-list {
+        margin-right: 5.5rem;       
+      }      
 }
   
