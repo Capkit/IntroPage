@@ -44,7 +44,7 @@
         <a href="#"><img src="https://imgur.com/j62VdYu.jpg" class="contact-image" alt="Link to contact me"></a>
         </div>
       </section>    
-    <p class="motto">"Within doing nothing is growing but weeds."</p></div>
+    <p class="motto">"Within doing, nothing is growing but weeds."</p></div>
     
     <section class="projects-section">
       <div class="project-section-title">Projects</div>
@@ -58,7 +58,7 @@
     
     <section class="skills-section">
       <div class="core-skills">
-        <h2>Core Skills</h2>
+        <h2>Skills</h2>
         <ul>
           <h3>Advanced:</h3>
           <li>Java SE</li>
@@ -70,6 +70,7 @@
         <ul>
           <h3>Basics:</h3>
           <li>JavaFX</li>
+          <li>mySQL, PostrgeSQL</li>
           <li>Javasript</li>
           <li>Node.js</li>
         </ul>
@@ -142,18 +143,55 @@
         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
         <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
       </ul>
+
+      	<div class="contact-section">
+
+		<div class="contact-wrap">
+			<span class="contact100-form-symbol">
+				<img src="https://imgur.com/j62VdYu.jpg" alt="SYMBOL-MAIL">
+			</span>
+
+			<form class="contact-form validate-form flex-sb flex-w">
+				<span class="contact100-form-title">
+					Drop Me A Message
+				</span>
+
+				<div class="wrap-input100 rs1 validate-input" data-validate = "Name is required">
+					<input class="input100" type="text" name="name" placeholder="Name">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1 validate-input" data-validate = "Email is required: e@a.z">
+					<input class="input100" type="text" name="email" placeholder="Email Address">
+          
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<textarea class="input100" name="message" placeholder="Write message"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+							Send
+						</span>
+					</button>
+				</div>
+			</form>
+      </div>
+    </div>
       
-      <form action="/action_page.php" method="post">
-        <fieldset>
-          <legend>Send message:</legend>
-          <div class="message"><i class="far fa-envelope"></i></div>
-          <input type="text" required name="email" placeholder="Enter your email address"><br>
-          <div class="message"><i class="fas fa-pencil-alt"></i></div>
-          <input type="text" name="message" placeholder="Write your message here"><br>
-           <button type="submit">Send email</button>
-        </fieldset>
-      </form>
+      
     </section>
   </main>
+  <footer>
+    <div class="footer-wrapper">
+      <p><small> Budapest | ©2019 </small></p>
+    </div>  
+  </footer>
 </body>
 </html>
