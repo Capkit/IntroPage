@@ -39,15 +39,15 @@ nav a {
 }
 
 .nav-menu:hover {
-  color: #c62f6e;
-  background: rgb(174, 249, 198);
+  color: #ffff;
+  background: rgb(181, 56, 114);
   transition: color .30s ease-in-out;
 }
 
 .nav-home:hover {
   color: #c62f6e;
 }
-/* PROFILE CARD */
+/*---------------------HEADER-PROFILE CARD------------------------------*/
 .profile-card-content {
   font-family: 'Inconsolata', monospace, 'Arial';
   font-size: 1.5rem;
@@ -58,6 +58,7 @@ nav a {
   align-items: center;
   height: 100vh;
   width: 100vw;
+  margin-top: -100px;
 }
 
 .profile-card {
@@ -98,17 +99,17 @@ nav a {
   text-align: center;
   justify-content: center;
   width: 100vw;
+  margin-top: -150px;
 }
 
 .main-menu img {
   border-radius:9999px;
   padding: 1px;
-  background-color: #c1c1c1;;
+  background-color: #c1c;
 }
 
 .menu-links {
   padding: 2rem;
-  background: url('https://imgur.com/dC1AUZo.jpg') no-repeat center/cover;
   width: 100vw;
   border-radius: 5px;
 }
@@ -302,14 +303,7 @@ nav a {
   margin: 1rem;
 }
 
-/* FOOTER STYLES */ 
 
-.footer-wrapper {
-  background: grey;
-  color: white;
-  text-align: center;
-  height: 100px;
-}
 
 /*------------IDEAS FROM https://colorlib.com/wp/free-inquiry-form-templates/---------------------------------*/
 
@@ -704,6 +698,18 @@ textarea.input100 {
 }
 
 
+/* FOOTER STYLES */ 
+
+.footer-wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background: grey;
+  color: white;
+  text-align: center;
+  height: 50px;
+}
+
 
 
 @media (min-width: 445px) {
@@ -732,13 +738,17 @@ textarea.input100 {
   .profile-card {
     height: 12rem;
     width: 20rem;
-    margin-right: 3rem;
+    margin-right: 5rem;
   }
  
 
  .learning-list, .other-interests-list {
     min-width: 90vw;
  }
+  
+     .fa-github-square:hover, .fa-instagram:hover, .fa-linkedin:hover {
+    transform: scale(1.2);   
+   }  
   
 }
 
@@ -767,7 +777,7 @@ textarea.input100 {
   text-align: center;
   height: 80vh;;
   width: 2vw;
-  background: #e57049;
+  background: rgb(181, 56, 114, 0.6);
   font-size: 1.5rem;
   writing-mode: vertical-lr; 
   transform: rotate(180deg);
@@ -820,10 +830,6 @@ textarea.input100 {
   font-size: 2rem; 
   grid-area: github-button;
   }   
-     
-   .fa-github-square:hover {
-    transform: scale(1.5);   
-   }  
     
 }
 
@@ -847,24 +853,29 @@ textarea.input100 {
       
    .top-header-content {
     background: rgb(242, 242, 242);
-  }  
+  } 
+      
+      .profile-card-content {
+        margin-bottom: 100px;
+      }      
     
     .profile-card {
     height: 15rem;
-    margin-left: 9rem;
+    width: 30rem;
+    margin-left: 10rem;
   }    
 
-    .menu-links {
-     width: 60vw;
-     margin-top: -40px;
-     border: 1px solid rgb(56, 54, 54);
-     }   
+      
+          
+      .projects-section span {
+        margin-left: 3rem;
+      } 
       
     .skills-section {
       flex-direction: rows;
       flex-wrap: wrap;
       height: 40rem;
-      padding-left: 4rem;
+      padding-left: 10rem;
     }  
       
 .learning-list, .other-interests-list {
@@ -881,5 +892,6 @@ textarea.input100 {
       
       .learning-list {
         width: 30%;
-      }      
-} 
+      }
+      
+}
