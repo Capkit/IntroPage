@@ -7,19 +7,10 @@
 .top-header-content {
   background: rgb(242, 242, 242);
   width: 100vw;
-  height: 9rem;
+  height: 10.5rem;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid rgb(219, 220, 221);
-}
-
-h1 {
-  font-family: 'Poiret One', cursive, 'Arial';
-  font-size: 1.5rem;
-  height: 3.5rem;
-  text-align: center;
-  padding-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 
@@ -157,15 +148,13 @@ nav a {
 }
 
 .project-section-title {
-  background: #f7e3ea;
   grid-area: header;
   width: 100%;
   height: 70%;
   font-family: 'Inconsolata', monospace, 'Arial';
   font-size: 1.5rem;
+  color: #ffff;
   text-align: center;
-  border: black .5px solid;
-  border-radius: 1000px;
   margin: 1.5rem 0 1.3rem;
 }
 
@@ -268,43 +257,43 @@ nav a {
   color: red;
 }
 
-/*--------------------CONTACT SECTION-----------------------*/
+/*-------------------------------CONTACT SECTION-------------------------------*/
 
-.contacts {
-  width: 100vw;
-  background: rgb(95, 94, 107);
-  color: #fff;
+.contact-top-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 1rem 3rem 3rem;
+  background: rgba(86, 96, 99);
 }
 
 .contacts ul {
+ min-width: 30rem;
  background: white;
- display: grid;
- grid-template-columns: 3rem 3rem 3rem 3rem;
- justify-items: center;
- align-items: center;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
  font-size: 3rem;
- padding-left: 3rem;
-  border: 1px solid;
-  border-radius: 333px;
-  margin-bottom: 2rem;
+ border: 1px solid #ffff;
+ border-radius: 333px;
+ box-shadow: 2
+ margin-bottom: 2rem;
 }
-
-
 
 
 .contacts h2 {
   font-size: 3rem;
+  font-family: Montserrat, 'Arial';
   margin-bottom: 2rem;
+  text-align: center;
+  color: #ffff;
 }
 
-.contacts form {
-  background: white;
-  width: 20rem;
-  margin: 1rem;
+.contact-top-section a{
+  padding: 1rem;
 }
+
 
 
 
@@ -361,8 +350,7 @@ iframe {
 [ Contact ]*/
 
 .contact-section {
-  width: 100%;  
-  min-height: 100%;
+  width: 100vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -382,7 +370,7 @@ iframe {
   display: block;
   position: absolute;
   z-index: -1;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   top: 0;
   left: 0;
@@ -721,13 +709,8 @@ textarea.input100 {
     width: 20%;
   }
   
-  h1 {
-   font-size: 3rem;  
-   font-family: 'Poiret One', cursive, 'Arial';
-   float: left;
-   padding: 0;
-   margin-left: 1rem;
-   margin-top: 0.5rem; 
+  .profile-card-content {
+  background: url('https://imgur.com/xovLHP8.jpg')  no-repeat 70% center/cover;
   }
   
   .profile-card {
@@ -772,7 +755,6 @@ textarea.input100 {
   text-align: center;
   height: 80vh;;
   width: 2vw;
-  background: rgb(181, 56, 114, 0.6);
   font-size: 1.5rem;
   writing-mode: vertical-lr; 
   transform: rotate(180deg);
@@ -850,7 +832,7 @@ textarea.input100 {
   } 
       
       .profile-card-content {
-        margin-bottom: 100px;
+        margin-bottom: 150px;
       }      
     
     .profile-card {
@@ -861,7 +843,12 @@ textarea.input100 {
       
       .projects-section {
         padding-left: 2rem;
-      }     
+      }    
+      
+      .project-section-title {
+        width: .2rem;
+        font-size: 2rem;
+      }
 
       
           
@@ -892,4 +879,4 @@ textarea.input100 {
         width: 30%;
       }
       
-}
+}  
