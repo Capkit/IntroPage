@@ -10,14 +10,14 @@
       type="image/x-icon" 
       href="http://www.sclance.com/pngs/png-favicon/png_favicon_1058029.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Caveat|Special+Elite" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Caveat|Special+Elite|Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
+  
   <header>
     <div class="header-content">
       <div class="top-header-content">
-        <h1></h1>
         <nav>          
             <a href="#main-menu" class="nav-menu">Menü</a>
             <a href="#" class="nav-home">Home</a>
@@ -47,8 +47,8 @@
     <p class="motto">"Within doing, nothing is growing but weeds."</p></div>
     
     <section class="projects-section" id="projects">
-      <div class="project-section-title">Projects</div>
-      <canvas class="project-1" id="canvas">
+      <h2 class="project-section-title">Projects</h2>
+      <canvas class="project-1" id="project-1">
       </canvas>
       <canvas class="project-2">
       </canvas>
@@ -137,12 +137,14 @@
       </div>
     </section>
     <section class="contacts" id="contact">
+      <div class="contact-top-section">
       <h2>Contact</h2>
-      <ul class="social-media">
-        <li><a href=""><i class="fab fa-github-square"></i></a></li>
+      <ul>
+        <li><a href="#"><i class="fab fa-github-square"></i></a></li>
         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
         <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
       </ul>
+        </div>
 
       	<div class="contact-section">
 
@@ -170,9 +172,7 @@
 				<div class="wrap-input100 validate-input" data-validate = "Message is required">
 					<textarea class="input100" name="message" placeholder="Write message"></textarea>
 					<span class="focus-input100"></span>
-				</div>
-
-				
+				</div>				
 				<div class="container-contact100-form-btn">
 					<button class="contact100-form-btn">
 						<span>
@@ -183,15 +183,13 @@
 				</div>
 			</form>
       </div>
-    </div>
-      
-      
+    </div>   
     </section>
   </main>
   <footer>
     <div class="footer-wrapper">
       <p><small> Budapest | ©2019 </small></p>
-    </div>  
+    </div> 
   </footer>
 </body>
 </html>
