@@ -1,237 +1,161 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="description" content="IntroPage">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>PepperWrapper</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="shortcut icon" 
-      type="image/x-icon" 
-      href="http://www.sclance.com/pngs/png-favicon/png_favicon_1058029.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Caveat|Special+Elite|Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<meta name="description" content="New design">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script type="text/javascript" src="jquery-2.1.3.js"></script>
+<!--PERSONAL SCRIPT JavaScript JQUERY WILL REPLACED INTO A SEPARATED LIBRARY-->
+<script type="text/javascript">
+   $(function() {
+
+
+	//elements
+	var $menu = $(".menu");
+	var $pages = $(".page");
+	var $menuLi = $menu.find("li").not(".to-home");
+	var $toHome = $menu.find(".to-home");
+  var $profileCard = $("#section-home");   
+	
+	//interna vars
+	var currentPage = "";
+	
+	$toHome.on("click", function() {
+		currentPage = "";
+		TweenMax.to($pages, 0.5, {
+			left: "-70%"
+		});
+		TweenLite.to($menuLi.filter(".active"), 0.5, {
+			className: "-=active"
+		});
+    $profileCard.show();
+	});
+	
+	$menuLi.on("click", function(event) {
+		
+		var $this = $(this);
+		var thisHref = $this.find("a").attr("href");
+		
+		if (currentPage !== thisHref && $pages.filter(thisHref).length > 0) {
+			currentPage = thisHref;
+			TweenMax.to($pages, 0.5, {
+				left: "-70%"
+			});
+			TweenMax.to($pages.filter(thisHref), 0.5, {
+				left: 0
+			});
+			TweenLite.to($menuLi.filter(".active"), 0.5, {
+				className: "-=active"
+			});
+			TweenLite.to($this, 0.5, {
+				className: "+=active"
+			});
+		}
+		$profileCard.hide();
+		event.preventDefault();
+	});
+});
+</script>
+
 </head>
 <body>
+  <!--------------------------------------MENU--------------------------------------->
+  <ul class="menu">
+    <li class="to-home"><a href="#">Home</a></li>
+    <li><a href="#about">Projects</a></li>
+    <li><a href="#gallery">Skills</a></li>
+    <li><a href="#contacts">Contacts</a></li>
+  </ul>
+  <!------------------------------------END OF MENU---------------------------------->
+
+
+   <!---------------------------------Profile Card----------------------------------->
+  <div class="vcard-body section-home" id="section-home">
+  <!--vcard-profile photo-->
+    <div class= "vcard-profile-photo">
+      <img src="https://imgur.com/p3tlQ73.jpg" id="profile-pic1" class= "profileActive"       alt= "Profile picture"/>
+    </div>
+
+    <div class= "vcard-description">
+    <!--vcard-Description-Profile-->
+      <h1 class= "profile-title"><span class="color1">Kitti, Füredi</span></h1>
+      <h2 class= "profile-subtitle">Hobby coder</h2>
+      <hr class="hr1">
+
+      <div class= "description-text">
+        <span>from</span>
+        <p><i class="fas fa-map-marker-alt"></i> Budapest, HU</p>
+      </div>
+
+      <div class= "description-footer">
+      <!--Item-->
+        <div class= "description-footer-item">
+        <p class="active"></p>
+        </div>
+      </div>
+     </div>
+     <div class= "vcard-footer">
+     <!--social icons-->
+       <div class="footer-icons">
+         <a href="#" target="_blank" ><i class="fa fa-linkedin-square"></i></a>
+			   <a href="#" target="_blank"><i class="fa fa-github"></i></a>
+			   <a href="#" target="_blank"><i class="fa fa-facebook-official"></i></a>
+       </div>
+     </div>
+  </div>
+ <!---------------------------------END OF Profile Card------------------------------->
+
+
+  <div id="about" class="page">
+        <div class="page-content">
+            <h2>Projects</h2>
+
+            <p>Here some projects</p>
+        </div>
+  </div>
   
-<main>
-<section id="body" class="">
-
-  <div class="container">
-    <!--Menu Bar-->
-    <nav class="main-menu" id="main-menu">
-      <ul class="main-menu-list">
-        <li>
-          <a href="#" class="link-home">Home</a>
-        </li>
-         <li>
-          <a href="#projects" class="link-page">Projects</a>
-          </li>
-        <li>
-          <a href="#skills" class= "link-page">Skills</a>
-          </li>
-        <li>
-          <a href="#contact" class= "link-page">Contact</a>
-          </li>
-      </ul>
-    </nav>
-      <!--End of Menu Bar-->
-    <!-- Profile Card-->
-    <div class="vcard-body section-home" id="section-home">
-      <!--vcard-profile photo-->
-      <div class= "vcard-profile-photo">
-        <img src="https://imgur.com/p3tlQ73.jpg" id="profile-pic1" class= "profileActive" alt= "Profile picture"/>
-      </div>
-      
-      <div class= "vcard-description">
-        <!--vcard-Description-Profile-->
-        <h1 class= "profile-title"><span class="color1">Kitti, Füredi</span></h1>
-        <h2 class= "profile-subtitle">Hobby coder</h2>
-        <hr class="hr1">
-       
-        <div class= "description-text">
-           <span>from</span>
-          <p><i class="fas fa-map-marker-alt"></i> Budapest, HU</p>
-        </div>
-        
-        <div class= "description-footer">
-          <!--Item-->
-          <div class= "description-footer-item">
-            <p class="active"></p>
-          </div>
-        
-        </div>
-        
-      </div>
-
-      <div class= "vcard-footer">
-        <!--social icons-->
-        <div class="footer-icons">
-          					<a href="#" target="_blank" ><i class="fa fa-linkedin-square"></i></a>
-        					
-					<a href="#" target="_blank"><i class="fa fa-github"></i></a>
-					<a href="#" target="_blank"><i class="fa fa-facebook-official"></i></a>
-
-        </div>
-        
-      </div>
-        
-    </div>
-    </div>
-     
-
-</section>
-
- 
-    <p class="motto">"Within doing, nothing is growing but weeds."</p>
+  <div id="gallery" class="page">
+        <div class="page-content">
     
-    <section class="projects-section" id="projects">
-      <h2 class="project-section-title">Projects</h2>
-      <canvas class="project-1" id="project-1">
-      </canvas>
-      <canvas class="project-2">
-      </canvas>
-      <canvas class="project-3"></canvas>
-      <span>  More projects on: <a href="https://github.com/Capkit" target="_blank"><i class="fab fa-github-square"></i> Github</a></span>
-    </section>
-    
-    <section class="skills-section" id="skills">
-      <div class="core-skills">
-        <h2>Skills</h2>
-        <ul>
-          <h3>Advanced:</h3>
-          <li>Java SE</li>
-          <li>Java Server</li>
-          <li>HTML - Bootstrap - CSS</li>
-          <li>Spring Boot</li>
-          <li>Linux</li>
-        </ul> 
-        <ul>
-          <h3>Basics:</h3>
-          <li>JavaFX</li>
-          <li>mySQL, PostrgeSQL</li>
-          <li>Javasript</li>
-          <li>Node.js</li>
-        </ul>
-        <ul>
-          <h3>Developing environment what I am using:</h3>
-          <li>Spring Boot</li>
-          <li>NetBeans</li>
-          <li>Eclipse</li>
-        </ul>
-      </div>
-      <div class="learning-list">
-      <ul>
-        <h2>Learn and practice java from:</h2>
-        <li class="sfj-item"> 
-          <h3>SFJ</h3>
-          <a href="http://sanfranciscoboljottem.com/">sanfranciscoboljottem.com</a>
-          <a href="#">Online Courses on <i class="fab fa-youtube"> Youtube</i></a>
-        </li>
-        
-        <li class="tnb-item">
-          <h3>thenewboston</h3> 
-          <a href="#">Online courses on  <i class="fab fa-youtube"> Youtube</i></a>
-        </li>    
-        
-        <li>
-          <a href="https://www.udemy.com/">Udemy online courses</a>
-        </li>
-        
-        <li> 
-          <a href="https://www.edx.org/">edX online courses</a>
-        </li>
-        <li>...from books</li>
-         <li>
-          <h3>Practice</h3>
-          <a href="https://codingbat.com/java">codingbat.com</a>
-        </li>
-        </ul>
-        
-        <ul>
-          <h2>Learn and practice Javascript - HTML - CSS from</h2>
-         <li>
-          <a href="https://codeberryschool.com/">CodeBerry Programozóiskola</a>
-        </li>
-          
-        <li>
-          <a href="https://www.freecodecamp.org/">freeCodeCamp</a>
-        </li>
-          
-        <li class="chrs-item">
-          <h3>Javascript and canvas tricks</h3>
-          <a href="https://chriscourses.com/">chriscourses.com</a>
-          <a href="#">Online courses on  <i class="fab fa-youtube"> Youtube</i></a>
-        </li>
-        </ul>  
-      </div>
-      
-      <div class="other-interests-list">
-        <ul>
-          <h2>Interested in too</h2>
-          <li class="hack-item">Etichal hacking <a href="#">Zaid Sabih - Ethical hacking course</a></li>
-          <li>Android App Development</li>
-          <li>Game Development</li>
-         </ul>
-      </div>
-    </section>
-    <section class="contacts" id="contact">
-      <div class="contact-top-section">
-      <h2>Contact</h2>
-      <ul>
-        <li><a href="#"><i class="fab fa-github-square"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-      </ul>
+
+       </div> 
+  
+  </div> 
+
+  <div id="links" class="page">
+        <div class="page-content">
+            <h2>Contact form</h2>
+
+            <p>Links to blogs with cats</p>
         </div>
+  </div>
 
-      	<div class="contact-section">
-
-		<div class="contact-wrap">
-			<span class="contact100-form-symbol">
-				<img src="https://imgur.com/j62VdYu.jpg" alt="SYMBOL-MAIL">
-			</span>
-
-			<form class="contact-form validate-form flex-sb flex-w">
-				<span class="contact100-form-title">
-					Drop Me A Message
-				</span>
-
-				<div class="wrap-input100 rs1 validate-input" data-validate = "Name is required">
-					<input class="input100" type="text" name="name" placeholder="Name">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 rs1 validate-input" data-validate = "Email is required: e@a.z">
-					<input class="input100" type="text" name="email" placeholder="Email Address">
-          
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 validate-input" data-validate = "Message is required">
-					<textarea class="input100" name="message" placeholder="Write message"></textarea>
-					<span class="focus-input100"></span>
-				</div>				
-				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
-						<span>
-							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-							Send
-						</span>
-					</button>
-				</div>
-			</form>
+  <div id="contacts" class="page">
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="title">
+      Contact me
+        </div>
+        <form class="form">
+          <input type="text" class="name field-in font" placeholder="         Your Name"/>
+      
+          <input type="text" class="email field-in font" placeholder="          Email"/>
+      
+          <textarea class="message field-in font" placeholder="     Message"></textarea> 
+      
+          <button class="submit font" href="#">Submit</button>
+        </form>  	
+        <div class="shadow"></div>
       </div>
-    </div>   
-    </section>
-  </main>
-  <footer>
-    <div class="footer-wrapper">
-      <p><small> Budapest | ©2019 </small></p>
-    </div> 
-  </footer>
+       <a href="#" target="_blank" ><i class="fa fa-linkedin-square"></i></a>
+			 <a href="#" target="_blank"><i class="fa fa-github"></i></a>
+			 <a href="#" target="_blank"><i class="fa fa-facebook-official"></i></a>
+
+    </div>
+   </div>
+  
 </body>
 </html>
