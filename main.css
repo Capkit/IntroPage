@@ -1,9 +1,3 @@
-body,div,p {
-	margin:0;
-	padding:0;
-	font-family:Helvetica,sans-serif;
-	font-size:18px;
-}
 
 * {
   box-sizing: border-box;
@@ -13,22 +7,25 @@ body,div,p {
 }
 
 
-
-
-body{
-  background: url("https://imgur.com/EPawCEI.jpg") no-repeat center/cover fixed;
+section {
+  height:100%;
+  width:100vw;
+	margin:0;
+	padding:0;
+	font-family:Helvetica,sans-serif;
+	font-size:18px;
+  height: 100vh;
+  width: 100vw;
+  background: url("https://imgur.com/EPawCEI.jpg") no-repeat center/cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-font-smoothing: subpixel-antialiased;
-  background-size: cover;
-  
 }
 
 
-
-
 .vcard-body{
+  position: absolute;
   width: 99%;
   margin: 0 auto;
   margin-top:20px;
@@ -171,66 +168,13 @@ Style for section-Home
   font-size: 12px;
 }
 
+@media (max-width:800px) {
+  .vcard-body {
+    margin-top: 250px;
+  }
+}
 
 
-@media (min-width:992px) {
-  .section-page-single {
-    left: 55%;
-    transform: translateY(-200px);
-    -moz-transform: translateY(-200px);
-    -webkit-transform: translateY(-200px);
-    visibility: hidden;
-    padding: 20px;
-    padding-top: 0px;
-  }
-}
-@media (min-width:992px) {
-  .section-page {
-    z-index: 11;
-    opacity: 0;
-  }
-}
-.section-page-active {
-  opacity: 1;
-  z-index: 22;
-  left: 55%;
-  visibility: visible;
-  transform: translateY(0px);
-  -moz-transform: translateY(0px);
-  -webkit-transform: translateY(0px);
-}
-@media (min-width:992px) {
-  .section-page-active {
-    margin-top: 30px;
-    margin-left: 10px;
-  }
-}
-@media (min-width: 1400px) {
-  .section-page-active {
-    margin-top: 180px;
-  }
-}
-@media (min-width:992px) {
-  .page-mask {
-    position: absolute;
-    top: 605px;
-    left: 30%;
-    display: block;
-    width: 40%;
-    height: 20px;
-    background: #333;
-    z-index: 77;
-    opacity: 0;
-    -webkit-transition: all 0.6s ease-in-out;
-    -moz-transition: all 0.6s ease-in-out;
-    transition: all 0.6s ease-in-out;
-  }
-}
-.page-mask-active {
-  left: 55%;
-  opacity: 1;
-  margin-left: 10px;
-}
 
 /* ===============
 End of Style for section-Home
@@ -268,29 +212,12 @@ Style for Footer
   background: #08aeac;
 }
 
-
-
-
-
-
-
-}
-
-
-html {
-	background:url("http://ivayloyovchev.com/pulsepro/data/img/gallery/wedding/IMG_3312.jpg") no-repeat center center fixed;
-	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	-o-background-size:cover;
-	background-size:cover;
-}
-
 /*-------------------------------------MENU-------------------------------*/
 
 .menu {
 	position:fixed;
 	top:30%;
-	left:-40px;
+	left:-30px;
 	z-index:100;
 }
 
@@ -354,10 +281,7 @@ html {
 @media (max-width: 800px) {
   
 .menu {
-  position: relative;
-  display: inline-grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  top: 0%;
 }
   
   .menu li {
@@ -367,14 +291,14 @@ html {
 
 /*---------------------------------------ENDF OF MENU-----------------------------*/
 
+
+
 .page {
 	background-color:rgba(0,0,0,0.7);
 	width:70%;
 	height:100%;
 	position:fixed;
 	left:-70%;
-
-
 }
 
 
@@ -391,8 +315,10 @@ html {
 
 @media (max-width: 800px) {
 
+  
+  
   .page-content {
-    width: 80%;
+    width: 100%;
     height: 100%;
   }
 
@@ -601,3 +527,4 @@ html {
 		padding-right: 3%;
 	}
 }
+
