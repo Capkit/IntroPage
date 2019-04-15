@@ -1,4 +1,5 @@
 
+
 * {
   box-sizing: border-box;
 }
@@ -283,7 +284,7 @@ Style for section-Home
   
 }
 
-/*---------------------------------------ENDF OF MENU-----------------------------*/
+/*---------------------------------------END OF MENU-----------------------------*/
 
 
 
@@ -298,28 +299,43 @@ Style for section-Home
 
 .page-content {
 	position:absolute;
-	width:55%;
-	height:80%;
-	top:10%;
-	right:15%;
+	width:100%;
+	height:100%;
 	color:#fff;
-  /* kis legördülő lista */
+  padding: 20px;
+  /* kis legördülő lista overflow*/
+}
+
+
+.page h2 {
+    color: white;
+    padding: 2rem;
+    font-size: 150%;
+    font-family: 'Major Mono Display', monospace, 'Arial';
+}
+
+
+.project-link {
+  position: relative;
+  top: 10rem;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 800px) {
 
   .page {
+   top: -3rem;
    display: flex;
    flex-direction: column;
    margin-top: 170px; 
-    height: 500px;
-    width: 100%;
+   height: 37rem;
+   width: 100%;
   }
   .page-content {
     display: flex;
     flex-direction: column;
-    height: 200px;
-    
+    height: 100%;
   }
 }
   @media (min-width: 800px) {
@@ -327,19 +343,149 @@ Style for section-Home
       margin-left: 100px;
       width: 90%;
     }
+  }
+
+/***************************CANVAS STYLES************************/
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
+
+canvas {
+  position: relative;
+  background: white;
+  top: 20px;
+  margin: 2%;
+  height: 15rem;
+  width: 30rem;
+}
+
+canvas:hover {
+  transform: scale(2.1);
+  transition: all 0.6s ease-in-out;
+  z-index: 1;
+}
+
+
+
+@media (max-width: 1200px) {
+
+  
+ canvas {
+   margin: 1%;
+   max-width: 14rem;
+   height: 14rem;
+  }
+}
+
+@media (max-width: 800px) {
+
+ canvas {
+    width: 12rem;
+   height: 10rem;
+  }
+  
+  .project-link {
+    top: 10rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .canvas-container {
+    flex-direction: column;
     
-    .page-content {
-      padding: 20px;
-      margin-right: 50px;
-    }
-  }  
+  }
 
- 
+ canvas {
+   width: 100%;
+   height: 30%;
+   margin: 3%;
+   left: 1.5rem;
+  }
+  
+  canvas:hover {
+    transform: scale(1.3);
+  }
+}
 
 
-/****contact****************/
+
+/***************************SKILLS SECTION*******************************/
+
+#skills .page-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgb(252, 45, 138, 0.5);
+}
+
+#skills .page-content h2 {
+  font-size: 100%;
+  text-decoration: underline;
+  text-decoration-color: #df3272;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#skills .page-content h3 {
+  text-align: left;
+  color: rgba(91,193,177);
+}
+
+#skills .page-content li {
+  display: grid;
+  justify-items: center;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+#skills .page-content li:hover {
+  background: #f7e3ea;
+  color: black;
+}
+#skills .page-content a {
+  text-decoration: none;
+  color: #f19531
+;
+}
+.fa-youtube {
+  color: red;
+}
+
+.core-skills, .learning-list, .other-interests-list {
+    width: 40rem;
+  background: url('https://imgur.com/NV8br63.jpg');
+}
+
+.learn-from-2 {
+  margin-top: -3.5rem;
+}
 
 
+
+@media (max-width: 800px) {
+  #skills .page-content {
+  display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow-y: scroll;
+    background: 
+    height: 100%;
+    width: 100%;
+  }
+  
+  .core-skills, .learning-list, .other-interests-list {
+  max-width: 100%;
+  background: url('https://imgur.com/NV8br63.jpg');
+
+  
+}
+}
+
+/***********************CONTACT****************/
 .title{
   margin: 0 auto;
   width: 100%;
@@ -349,7 +495,7 @@ Style for section-Home
   color: #2E4B62;
 }
 .wrapper {
-  width: 100%;
+  width: 50%;
   height: 50%;
   margin: 5% auto 0 auto; 
 }
@@ -464,8 +610,13 @@ Style for section-Home
   font-size: 3rem;
   margin-left: 18%;
   color: #fff;
-  top: 150px;
+  top: 10rem;
   padding: 3px;
+  left: 5rem;
+}
+
+#contacts a:hover {
+  color: grey;
 }
 
 @media (max-width: 800px) {
@@ -473,13 +624,16 @@ Style for section-Home
   .wrapper {
     display: flex;
     flex-direction: column;
-    margin-left: -20px;
+    width: 80%;
+      height:100%;
   }
-  #contacts a {
-    font-size: 2rem;
-    top: 200px;
-    margin-left: 30%;
+  
+  form {
+    overflow-y: scroll;
   }
+  
+
+
 }
 
 
