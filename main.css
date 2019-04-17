@@ -1,15 +1,15 @@
 
-
+/*********************************GENERAL*****************************/
 * {
   box-sizing: border-box;
-}
+  }
+/*--------------------------------------------------------------------/
 
-
+/**********************************BODY********************************/
 main {
+  position: relative;
   height:100vh;
   width:100vw;
-	margin:0;
-	padding:0;
 	font-family:Helvetica,sans-serif;
 	font-size:18px;
   background: url("https://imgur.com/EPawCEI.jpg") no-repeat center/cover;
@@ -17,13 +17,14 @@ main {
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-font-smoothing: subpixel-antialiased;
-}
+  }
+/*---------------------------------------------------------------------*/
 
 
+/*****************************PROFILE CARD******************************/
 .vcard-body{
   position: absolute;
-  width: 99%;
-  margin: 0 auto;
+  width: 100%;
   margin-top:20px;
   margin-bottom: 20px;
   padding: 20px;
@@ -40,144 +41,93 @@ main {
   -moz-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
   box-shadow: 15px 6px 18px 0px rgba(0, 0, 0, 0.46);
   border-bottom: 15px solid rgb(193, 25, 117);
-}
-
-
-@media (min-width:992px) {
-  .vcard-body {
-    position: absolute;
-    margin-top: 30px;
-    left: 30%;
-    height: 570px;
-    width: 40%;
-    padding: 45px;
-    padding-bottom: 20px;
   }
-}
-@media (min-width: 1400px) {
-  .vcard-body {
-    margin-top: 100px;
-  }
-}
+
 .vcard-body-pgactive {
   left: 15%;
-}
+  }
 
-  
-}
-
-/* ===============
-End of Style for section- vcard-body
-===================*/ 
-
-/* ===============
-Style for section-Home
-===================*/ 
 .section-home {
   z-index: 88;
   opacity: 1;
-}
+  }
 
 .vcard-profile-photo {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  margin: 0 auto;
-  margin-bottom: 20px;
   position: relative;
-}
+  max-width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  }
 
 .vcard-profile-photo:hover {
    transform: scale(1.1);
   transition: all 0.5s ease-in-out; 
-}
+  }
 
 .vcard-profile-photo img {
   width: 100%;
-  border-radius: 100%;
+  border-radius: 10%;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
    border: 5px solid #ddd;
   -webkit-transition: all 0.6s ease-in-out;
   -moz-transition: all 0.6s ease-in-out;
-  top:0;
-  left:0;
-  position: absolute;
-  opacity: 0;
-}
-.profileActive {
-  opacity: 1!important;
-}
+  }
+
 .color1 {
   color: #08aeac;
-}
+  }
+
 .vcard-description {
   text-align: center;
-}
+  }
+
 .profile-title {
   font-family: 'Arial';
   text-align: center;
   font-weight: bold;
   margin-top: 0;
-  font-size: 30px;
+  font-size: 35px;
   letter-spacing: -2px;
   margin-bottom: 8px;
   color: #021533;
-}
+  }
 .profile-subtitle {
   font-family: 'Inconsolata', cursive, 'Arial';
   text-align: center;
-  margin-top: 0;
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 10px;
   font-weight: bold;
-}
+  }
 
 .hr1{
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background: linear-gradient(#f7cff2, #cff7e5);
   margin-top: 10px;
   margin-bottom: 5px;
-}
+  }
 .description-text {
   padding: 10px;
   padding-top: 5px;
   margin-bottom: 1px;
-   font-family: 'Arial';
-}
+  font-family: 'Arial';
+  }
 .description-text p {
-  font-size: 25px;
-}
+  font-size: 20px;
+  }
 .description-footer-item {
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   padding: 2px;
   margin-bottom: 15px;
   background-color: #08aeac;
   color: white;
   font-family: 'Open Sans', sans-serif;
-}
-.description-footer-item p{
-  margin-bottom: 0;
-  color: #ffffff;
-  font-size: 12px;
-}
-
-@media (max-width:800px) {
-  .vcard-body {
-    margin-top: 200px;
   }
-}
 
-
-
-/* =========================================================================*/ 
 .footer-icons {
   text-align: center;
   font-size: 58px;
-}
+  }
 .footer-icons a {
   color: #ffffff;
   display: inline-block;
@@ -193,24 +143,48 @@ Style for section-Home
   border-radius: 999px;
   -moz-border-radius: 999px;
   -webkit-border-radius: 999px;
-}
+  }
 
 .fa-github, .fa-facebook-official, .fa-linkedin-square {
-
-}
+  }
 .footer-icons a:hover{
   color: #ffffff;
   background: #08aeac;
+  }
+
+@media (max-width:800px) {
+  .vcard-body {
+    margin-top: 10REM;
+  }
 }
 
-/*-------------------------------------MENU-------------------------------*/
+@media (min-width:992px) {
+  .vcard-body {
+    margin-top: 30px;
+    left: 30%;
+    height: 570px;
+    width: 40%;
+    padding: 45px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .vcard-body {
+    margin-top: 100px;
+  }
+}
+
+/*------------------------------------------------------------------------*/
+
+
+/**********************************MENU-NAV*********************************/
 
 .menu {
 	position:fixed;
 	top:30%;
 	left:-15px;
 	z-index:100;
-}
+  }
 
 .menu li {
 	list-style:none;
@@ -231,17 +205,17 @@ Style for section-Home
   position: relative;
   overflow: hidden;
   z-index: 1;
-}
+  }
 
 .menu li.active {
 	background-color:rgba(91,193,177,.75);
 	cursor:default;
-}
+  }
 
 .menu li a {
 	text-decoration:none;
 	color:#fff;
-}
+  }
 
 .menu li:before{
   content: '';
@@ -255,46 +229,42 @@ Style for section-Home
   transition: all 0.3s ease-in-out;
   background: rgb(193, 25, 117);
   z-index: -1;
-}
+  }
 
 .menu li:hover{
   color: white;
   border: 0px solid transparent!important;
   text-decoration: none;
   padding-left: 30px; 
-}
+  }
 .menu li:hover:before{
   width:100%;
-}
-
-/*************MEDIA QUERY FOR MENU*************/
+  }
 
 @media (max-width: 800px) {
-  
+
 .menu {
 	top:0%;
 	left:0px;
 	z-index:100;
-}
-  
+  }
+
 .menu li {
 	  width:100vw;
     padding: 10px;
-} 
-  
+  }
 }
 
-/*---------------------------------------END OF MENU-----------------------------*/
+/*--------------------------------------------------------------------------------/
 
-
-
+/*************************************PAGE-STYLES*********************************/
 .page {
 	background-color:rgba(0,0,0,0.7);
 	width:70%;
 	height:100%;
-	position:fixed;
+	position:absolute;
 	left:-70%;
-}
+  }
 
 
 .page-content {
@@ -303,16 +273,15 @@ Style for section-Home
 	height:100%;
 	color:#fff;
   padding: 20px;
-  /* kis legördülő lista overflow*/
-}
-
+  /*overflow*/
+  }
 
 .page h2 {
     color: white;
     padding: 2rem;
     font-size: 150%;
     font-family: 'Major Mono Display', monospace, 'Arial';
-}
+  }
 
 
 .project-link {
@@ -320,10 +289,9 @@ Style for section-Home
   top: 10rem;
   display: flex;
   justify-content: center;
-}
+  }
 
 @media (max-width: 800px) {
-
   .page {
    top: -3rem;
    display: flex;
@@ -339,133 +307,215 @@ Style for section-Home
   }
 }
   @media (min-width: 800px) {
-    .page {
+   .page {
       margin-left: 100px;
       width: 90%;
+   }
+}
+
+/*------------------------------------------------------------------------*/
+
+/*******************************PROJECTS-SECTION***************************/
+
+.loading {
+    position: relative;
+    color: rgba(0, 0, 0, .3);
+    font-size: 2rem;
+    background: white;
+    width: 80%;
+    left: 7rem;
+    border-radius: 15px;
+    text-align: center;
+  }
+.loading:before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    max-width: 22rem;
+    white-space: nowrap;
+    color: #fff;
+    animation: loading 5s alternate;
+  animation-iteration-count: infinite;
+  }
+@keyframes loading {
+    0% {
+        max-width: 0;
     }
+    40% {
+        color: red;
+    }
+     60% {
+        color: #ff4400;
+    }
+     80% {
+    color: #c40748;
   }
+}
 
-/***************************CANVAS STYLES************************/
+#projects p {
+  font-family: 'Inconsolata', curves, 'Arial';
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
 
-.canvas-container {
+.project-img {
   display: flex;
-  justify-content: center;
-  align-content: space-between;
-}
+  align-items: center;
+  padding: 2rem;
+  }
 
-canvas {
+.github-img {
   position: relative;
-  background: white;
-  top: 20px;
-  margin: 2%;
-  height: 15rem;
-  width: 30rem;
+  width: 84%;
+  height: 93%;
+  border-radius: 99px;
+  }
+
+.codepen-img {
+  position: relative;
+  width: 80%;
+  height: 93%;
+  left: 5rem;
+  border-radius: 99px;
+  }
+
+.github-img:hover {
+  bottom: 1rem;
+  }
+
+.codepen-img:hover {
+  bottom: 1rem;
+  }
+
+
+
+@media (max-width: 1100px) {
+.github-img {
+  left: 2rem;
+  }   
+  .loading {
+    left: 9rem;
+    width: 70%;
+  }
+}
+@media (max-width: 645px) {
+  
+  .loading {
+    left: 5rem;
+  }
+.github-img {
+  left: 3rem;
+  }
+  .codepen-img {
+  left: 3rem;
+  }   
 }
 
-canvas:hover {
-  transform: scale(2.1);
-  transition: all 0.6s ease-in-out;
-  z-index: 1;
-}
 
+@media (max-width: 500px) {
+  
+  .loading {
+    font-size: 1.2rem;
+    background: white;
+    min-width: 100%;
+    left: 1rem;
+  }  
 
-
-@media (max-width: 1200px) {
+  #projects p {
+    font-size: 1rem;
+  }
+  
+.project-img {
+  flex-direction: column;
+  padding: 1rem;
+  }
 
   
- canvas {
-   margin: 1%;
-   max-width: 14rem;
-   height: 14rem;
-  }
-}
-
-@media (max-width: 800px) {
-
- canvas {
-    width: 12rem;
-   height: 10rem;
-  }
-  
-  .project-link {
-    top: 10rem;
-  }
-}
-
-@media (max-width: 420px) {
-  .canvas-container {
-    flex-direction: column;
-    
+.github-img {
+  max-width: 13rem;
+  max-height: 10rem;
+  left: 1rem;
   }
 
- canvas {
-   width: 100%;
-   height: 30%;
-   margin: 3%;
-   left: 1.5rem;
-  }
-  
-  canvas:hover {
-    transform: scale(1.3);
+.codepen-img {
+  left: 0;
+  max-width: 13rem;
+  max-height: 10rem;
+  left: 1rem;
   }
 }
 
 
+/*----------------------------------------------------------------------*/
 
 /***************************SKILLS SECTION*******************************/
-
 #skills .page-content {
   display: flex;
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: rgb(252, 45, 138, 0.5);
-}
+  }
 
 #skills .page-content h2 {
-  font-size: 100%;
+  font-family: 'Raleway';
+  font-size: 1.5rem;
   text-decoration: underline;
-  text-decoration-color: #df3272;
+  text-decoration-color: #b2055b;
   text-align: center;
   margin-top: 2rem;
-}
+  }
 
 #skills .page-content h3 {
   text-align: left;
-  color: rgba(91,193,177);
-}
+  margin-left: .5rem;
+  color: #5bc1b1;
+  font-weight: 1000;
+  }
 
 #skills .page-content li {
   display: grid;
   justify-items: center;
   line-height: 1.5rem;
   text-align: center;
+  }
+
+#skills ul img {
+  max-width: 4rem;
+  border-radius: 10px;
 }
 
 #skills .page-content li:hover {
   background: #f7e3ea;
   color: black;
-}
+  }
 #skills .page-content a {
   text-decoration: none;
-  color: #f19531
-;
-}
+  color: #051519;
+    font-weight: bold;
+  }
 .fa-youtube {
   color: red;
-}
+  }
 
 .core-skills, .learning-list, .other-interests-list {
-    width: 40rem;
-  background: url('https://imgur.com/NV8br63.jpg');
-}
+  font-family: 'Raleway';
+   width: 40rem;
+   background: rgb(255, 226, 238, .3);
+   margin: 1rem;
+   border-radius: 50px;
+  }
 
 .learn-from-2 {
   margin-top: -3.5rem;
+  }
 }
 
-
-
+@media (max-width: 1040px) {
+  .learning-list {
+    margin-bottom: 3rem;
+  }
+}
 @media (max-width: 800px) {
   #skills .page-content {
   display: flex;
@@ -476,45 +526,34 @@ canvas:hover {
     height: 100%;
     width: 100%;
   }
-  
   .core-skills, .learning-list, .other-interests-list {
   max-width: 100%;
-  background: url('https://imgur.com/NV8br63.jpg');
-
-  
+  }
 }
-}
+/*------------------------------------------------------------------------------*/
 
-/***********************CONTACT****************/
+/**********************************CONTACT-SECTION*******************************/
 .title{
+  font-family: 'Inconsolata', 'Arial';
   margin: 0 auto;
   width: 100%;
   text-align: center;
   padding-bottom: 10px;
   font-size: 30px;
-  color: #2E4B62;
-}
+  color: #fff;
+  }
 .wrapper {
   width: 50%;
   height: 50%;
   margin: 5% auto 0 auto; 
-}
+  }
 
 .form {
   text-align: center; 
   -webkit-animation: bounce 4.5s infinite;
   -moz-animation: bounce 4.5s infinite;
   animation: bounce 4.5s infinite;
-}
-.shadow{
-  box-shadow: 0px 0px 20px 5px #AAA;
-  opacity: 0.5;
-  border-radius: 100px;
-  width: 45%; 
-  margin: 40px auto 0 auto;
-  padding: 0 10px;  
-  -webkit-animation: shadow 4.5s infinite;
-}
+  }
 .field-in {
   display: block;
   margin: 20px auto;
@@ -522,58 +561,63 @@ canvas:hover {
   border-radius: 2px;
   border: none;
   width: 100%;
+   background: #ededed;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
-}
+  }
 .name {
-  background-color: rgba(91,193,177,.75);  
   border-bottom: 5px solid #CB64B2;
-	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-image: url('https://imgur.com/Zs2XqZJ.png');
 	background-size: 25px 25px;
 	background-position: 10px 5px;
 	background-repeat: no-repeat;
-}
+  }
 
 .name:hover{
   background-color: #DF1B76;
   border-bottom: 5px solid #B2175F;
-  background-size: 10px 10px;
-}
+  background-size: .5px .5px;
+  }
 .name:focus, .email:focus, .message:focus{
   outline: none;
   padding:15px;
-}
+  }
 .email {
-  background-color: rgba(91,193,177,.75);  
   border-bottom: 5px solid #502789;
-  background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+  background-image: url('https://imgur.com/IPeDAuP.png');
 	background-size: 25px 25px;
 	background-position: 10px 5px;
 	background-repeat: no-repeat;
-}
+  }
 .email:hover{
   background-color: #2014CB;
   border-bottom: 5px solid #18108E;
-  background-size: 10px 10px;
-}
-.message {   
-  background-color: rgba(91,193,177,.75);
+  background-size: .5px .5px;
+  }
+.message {
+  font-family: 'Arial';
   border-bottom: 5px solid #1185C3;
-  overflow: hidden;
-  height: 50px;
-  background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+  background-image: url('https://imgur.com/aNjz6g8.png');
 	background-size: 25px 25px;
 	background-position: 10px 5px;
 	background-repeat: no-repeat;
-}
+  overflow: hidden;
+  height: 70px;
+  font-size: 1.4rem;
+  overflow-y: scroll;
+  }
+
 .message:hover{
   background-color: #2DD7BB;
   border-bottom: 5px solid #2BB09A;
   height: 150px;
-  background-size: 10px 10px;
-}
+  background-size: .5px .5px;
+  }
+
+
 .submit{
+  font-family: 'Inconsolata', 'Arial';
   border-radius:5px;
   padding:10px;
   background-color: #EE78D1;  
@@ -582,63 +626,67 @@ canvas:hover {
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
-}
+  }
 .submit:hover{
   -webkit-transform: translate(0, 4px);
   border-bottom: 2px solid #CB64B2;  
   box-shadow: inset 0px 0px 10px 10px #CF5DB2;
   cursor: pointer;
-}
+  }
 ::-webkit-input-placeholder {
-   color: white;
-}
+   color: black;
+  }
 
 :-moz-placeholder { 
-   color: white;
-}
+   color: black;
+  }
 
 ::-moz-placeholder { 
-   color: white; 
-}
+   color: black; 
+  }
 
 :-ms-input-placeholder {  
-   color: white;  
-}
-
-#contacts a {
-  position: relative;
-  font-size: 3rem;
-  margin-left: 18%;
-  color: #fff;
-  top: 10rem;
-  padding: 3px;
-  left: 5rem;
-}
-
-#contacts a:hover {
-  color: grey;
-}
+   color: black; 
+  }
 
 @media (max-width: 800px) {
-  
+
   .wrapper {
     display: flex;
     flex-direction: column;
     width: 80%;
       height:100%;
   }
-  
-  form {
-    overflow-y: scroll;
-  }
-  
-
-
 }
 
+.footer-wrapper {
+  font-family: 'IBM Plex Mono', monospace, 'Arial';
+  font-size: .8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+  text-align: center;
+  height: 2rem;
+  }
 
+@media (max-width: 210px) {
+  .section-home {
+    max-height: 75%;
+  }
+  .vcard-description {
+    max-height: 13rem;
+  }
+  .footer-icons a{
+    width:20px;
+    height:20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 
-
+/*************************************ANIMATION**********************************/
 
 @-webkit-keyframes bounce{
   0%{
