@@ -1,7 +1,7 @@
 <?php
 
     $mail_to = "info@pepperwrapper.com";
-    $message = $_POST['message'];
+    $message = $_GET['message'];
     $subject = "Test";
     
     
