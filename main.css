@@ -8,7 +8,7 @@
 /**********************************BODY********************************/
 main {
   position: relative;
-  height:100vh;
+  height:95vh;
   width:100vw;
 	font-family:Helvetica,sans-serif;
 	font-size:18px;
@@ -154,15 +154,15 @@ main {
 
 @media (max-width:800px) {
   .vcard-body {
-    margin-top: 10REM;
+    margin-top: 20%;
   }
 }
 
 @media (min-width:992px) {
   .vcard-body {
-    margin-top: 30px;
+    bottom: 40px;
     left: 30%;
-    height: 570px;
+    height: 500px;
     width: 40%;
     padding: 45px;
     padding-bottom: 20px;
@@ -179,6 +179,7 @@ main {
 
 /**********************************MENU-NAV*********************************/
 
+
 .menu {
 	position:fixed;
 	top:30%;
@@ -186,7 +187,7 @@ main {
 	z-index:100;
   }
 
-.menu li {
+.menu a {
 	list-style:none;
 	display:block;
 	margin-bottom:5px;
@@ -204,20 +205,17 @@ main {
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
+  	text-decoration:none;
+	color:#fff;
   z-index: 1;
   }
 
-.menu li.active {
+.menu a.active {
 	background-color:rgba(91,193,177,.75);
 	cursor:default;
   }
 
-.menu li a {
-	text-decoration:none;
-	color:#fff;
-  }
-
-.menu li:before{
+.menu a:before{
   content: '';
   display:block;
   position:absolute;
@@ -231,27 +229,72 @@ main {
   z-index: -1;
   }
 
-.menu li:hover{
+.menu a:hover{
   color: white;
   border: 0px solid transparent!important;
   text-decoration: none;
   padding-left: 30px; 
   }
-.menu li:hover:before{
+.menu a:hover:before{
   width:100%;
   }
 
 @media (max-width: 800px) {
 
+ .menubtn {
+  width: 100vw;
+  background-color: rgba(91,193,177,.9);
+  color: white;
+  padding: 6px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+ 
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+  
 .menu {
-	top:0%;
-	left:0px;
-	z-index:100;
+  width: 100vw;
+  display: none;
+  position: absolute;
+  background-color: rgb(38, 38, 38);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  z-index: 1;
+}  
+
+ .menu a {
+  width: 100%;
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu:hover {
+    z-index: 999;
+  }  
+  
+.menu a:hover {
+  background-color: #f1f1f1;
   }
 
-.menu li {
-	  width:100vw;
-    padding: 10px;
+
+.menu-container:hover .menu {
+  display: block;
+}
+
+.menu-container:hover .menubtn {
+  background-color: #021533;
+}  
+  
+}
+
+@media (min-width: 800px) {
+  .menubtn {
+   display: none;
   }
 }
 
@@ -264,6 +307,7 @@ main {
 	height:100%;
 	position:fixed;
 	left:-70%;
+  margin-top: -3rem;
   }
 
 
@@ -278,7 +322,7 @@ main {
 
 .page h2 {
     color: white;
-    padding: 2rem;
+    padding: 10px;
     font-size: 150%;
     font-family: 'Major Mono Display', monospace, 'Arial';
   }
@@ -293,14 +337,15 @@ main {
 
 @media (max-width: 800px) {
   .page {
-   top: -3rem;
+   top: -9rem;
    display: flex;
    flex-direction: column;
    margin-top: 170px; 
-   height: 37rem;
+   height: 95%;
    width: 100%;
   }
   .page-content {
+    position: sticky;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -310,9 +355,9 @@ main {
    .page {
       margin-left: 100px;
       width: 90%;
+      height: 103%;
    }
 }
-
 /*------------------------------------------------------------------------*/
 
 /*******************************PROJECTS-SECTION***************************/
@@ -356,7 +401,7 @@ main {
   font-family: 'Inconsolata', curves, 'Arial';
   font-size: 2rem;
   margin-top: 3rem;
-  margin-left: 3rem;
+  text-align: center;
 }
 
 .project-img {
@@ -367,16 +412,17 @@ main {
 
 .github-img {
   position: relative;
-  width: 84%;
-  height: 93%;
+  width: 70%;
+  height: 83%;
   border-radius: 99px;
+  left: 4rem;
   }
 
 .codepen-img {
   position: relative;
-  width: 80%;
-  height: 93%;
-  left: 5rem;
+  width: 70%;
+  height: 83%;
+  left: 8rem;
   border-radius: 99px;
   }
 
@@ -392,8 +438,12 @@ main {
 
 @media (max-width: 1100px) {
 .github-img {
-  left: 2rem;
+  left: 3rem;
   }   
+  
+  .codepen-img {
+    left: 3rem;
+  }
   .loading {
     left: 9rem;
     width: 70%;
@@ -409,7 +459,7 @@ main {
   }
   .codepen-img {
   left: 3rem;
-  }   
+  }
 }
 
 
@@ -419,7 +469,7 @@ main {
     font-size: 1.2rem;
     background: white;
     min-width: 100%;
-    left: 1rem;
+    left: .3rem;
   }  
 
   #projects p {
@@ -445,14 +495,21 @@ main {
   left: 1rem;
   }
 }
+    @media (min-width: 1500px) {
+      #skills .page-content {
+      margin-left: 100px;
+    }
+}
+
+
 
 
 /*----------------------------------------------------------------------*/
 
 /***************************SKILLS SECTION*******************************/
+
 #skills .page-content {
   display: flex;
-  justify-content: center;
   width: 100%;
   height: 100%;
   }
@@ -500,48 +557,42 @@ main {
 
 .core-skills, .learning-list, .other-interests-list {
   font-family: 'Raleway';
-   width: 40rem;
    background: rgb(255, 226, 238, .3);
    margin: 1rem;
    border-radius: 50px;
   }
 
-.learn-from-2 {
-  margin-top: -3.5rem;
+
+@media (max-width: 1100px) {
+  #skills .page-content {
+    overflow-y: scroll;
+    height: 105%;
+    width: 100%;
+    font-size: 1rem;
+  }
+  #skills .page-content li {
+    margin-top: -.3rem;
   }
 }
 
-@media (max-width: 1040px) {
-  .learning-list {
-    margin-bottom: 3rem;
-  }
-}
-@media (max-width: 800px) {
-  #skills .page-content {
-  display: flex;
-    justify-content: start;
-    align-items: center;
-    overflow-y: scroll;
-    background: 
-    height: 100%;
-    width: 100%;
-  }
-  .core-skills, .learning-list, .other-interests-list {
-  max-width: 100%;
-  }
-}
 /*------------------------------------------------------------------------------*/
 
 /**********************************CONTACT-SECTION*******************************/
 .title{
   font-family: 'Inconsolata', 'Arial';
   margin: 0 auto;
-  width: 100%;
+  max-width: 70%;
   text-align: center;
-  padding-bottom: 10px;
   font-size: 30px;
   color: #fff;
   }
+
+font {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapper {
   width: 50%;
   height: 50%;
@@ -657,6 +708,15 @@ main {
     width: 80%;
       height:100%;
   }
+  
+  .title {
+    font-size: 20px;
+    margin-top: 25rem
+  }
+  
+  .form {
+    margin-top: -33rem;
+  }
 }
 
 .footer-wrapper {
@@ -685,6 +745,8 @@ main {
     line-height: 20px;
   }
 }
+
+
 
 /*************************************ANIMATION**********************************/
 
