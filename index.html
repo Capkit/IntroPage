@@ -12,7 +12,8 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Major+Mono+Display|Inconsolata|Raleway" rel="stylesheet">
- <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script> 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 <script type="text/javascript" src="jquery-2.1.3.js"></script>
@@ -80,7 +81,8 @@ $(document).ready(function () {
 		var name = $('name');
 	})
 })
-		
+	 
+   
 </script>
 
 </head>
@@ -89,6 +91,8 @@ $(document).ready(function () {
   <main>
     <section class="starter-page">
     <!--------------------------------------MENU--------------------------------------->
+      <div class="menu-container">
+      <button class="menubtn">Menu</button>
       <nav>
         <ul class="menu">
           <li class="to-home"><a href="#">Home</a></li>
@@ -97,6 +101,7 @@ $(document).ready(function () {
           <li><a href="#contacts" class="contactForm">Contacts</a></li>
         </ul>
       </nav>
+      </div>
     <!------------------------------------END OF MENU---------------------------------->
 
 
@@ -244,12 +249,12 @@ $(document).ready(function () {
     <div id="contacts" class="page">
       <div class="page-content">
         <div class="wrapper">
-          <div class="title">Contact me</div>
+          <div class="title">Email: <font color="green">kitti@pepperwrapper.com </font>or use the contact form to send messages</div>
           <form class="form" action="https://formspree.io/kiti.fur@gmail.com" method="POST">
-            <input name="name" type="text" class="name field-in font" placeholder="         Your Name"/>
-            <input name="email" type="text" class="email field-in font" placeholder="          Email"/>
-            <textarea name="message "type="text" class="message field-in font" placeholder="     Enter message here..."></textarea> 
-            <button name="submit" class="submit font" type="submit">Submit</button>
+            <input type="text" class="name field-in font" placeholder="         Your Name" name="name"/>
+            <input type="email" class="email field-in font" placeholder="          Email" name="email"/>
+            <textarea type="text" class="message field-in font" placeholder="     Enter message here..." name="message"></textarea> 
+            <button class="submit font" type="submit" name="submit">Submit</button>
           </form>  	
        </div>  
       </div>
