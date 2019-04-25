@@ -4,7 +4,6 @@
   box-sizing: border-box;
   }
 /*--------------------------------------------------------------------/
-
 /**********************************BODY********************************/
 main {
   position: relative;
@@ -255,7 +254,7 @@ main {
 }
   
 .menu {
-  width: 110vw;
+  width: 102.5vw;
   display: none;
   position: absolute;
   background-color: rgb(38, 38, 38);
@@ -297,7 +296,6 @@ main {
 }
 
 /*--------------------------------------------------------------------------------/
-
 /*************************************PAGE-STYLES*********************************/
 .page {
 	background-color:rgba(0,0,0,0.7);
@@ -362,12 +360,13 @@ main {
 
 .loading {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgba(0, 0, 0, .3);
     font-size: 2rem;
-    background: white;
-    width: 80%;
-    left: 7rem;
-    border-radius: 15px;
+    max-width: 60%;
+    left: 14rem;
     text-align: center;
   }
 .loading:before {
@@ -376,7 +375,6 @@ main {
     overflow: hidden;
     max-width: 22rem;
     white-space: nowrap;
-    color: #fff;
     animation: loading 5s alternate;
   animation-iteration-count: infinite;
   }
@@ -384,14 +382,17 @@ main {
     0% {
         max-width: 0;
     }
-    40% {
+    20% {
         color: red;
     }
-     60% {
+     40% {
         color: #ff4400;
     }
-     80% {
+     60% {
     color: #c40748;
+  }
+     80% {
+    color: #50f442;
   }
 }
 
@@ -804,4 +805,3 @@ font {
     width: 50%;
   }
 }
-
