@@ -544,7 +544,7 @@ main {
 #skills .page-content a {
   text-decoration: none;
   color: #051519;
-    font-weight: bold;
+  font-weight: bold;
   }
 .fa-youtube {
   color: red;
@@ -568,6 +568,12 @@ main {
   #skills .page-content li {
     margin-top: -.3rem;
   }
+}
+
+@media (min-width: 1100px) {
+  #skills .page-content {
+   left: 10%;
+	}
 }
 
 /*------------------------------------------------------------------------------*/
