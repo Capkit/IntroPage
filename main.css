@@ -8,8 +8,8 @@ main {
   position: relative;
   height:95vh;
   width:100vw;
-	font-family:Helvetica,sans-serif;
-	font-size:18px;
+  font-family:Helvetica,sans-serif;
+  font-size:18px;
   background: url("https://imgur.com/EPawCEI.jpg") no-repeat center/cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -36,7 +36,7 @@ main {
   -moz-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
   border-radius: 0px;
-    -moz-border-radius: 0px;
+  -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   -webkit-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
   -moz-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
@@ -62,7 +62,7 @@ main {
   }
 
 .vcard-profile-photo:hover {
-   transform: scale(1.1);
+  transform: scale(1.1);
   transition: all 0.5s ease-in-out; 
   }
 
@@ -136,7 +136,7 @@ main {
   height:50px;
   text-align:center;
   background:#333333;
-    -webkit-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-size: 24px;
@@ -188,15 +188,15 @@ main {
   }
 
 .menu a {
-	list-style:none;
-	display:block;
-	margin-bottom:5px;
-	margin-left:0;
-	padding:20px;
-	background-color:rgba(0,0,0,0.7);
-	text-align:center;
-	width:140px;
-	cursor:pointer;
+  list-style:none;
+  display:block;
+  margin-bottom:5px;
+  margin-left:0;
+  padding:20px;
+  background-color:rgba(0,0,0,0.7);
+  text-align:center;
+  width:140px;
+  cursor:pointer;
   color: #ffffff;
   font-size: 15px;
   text-transform: uppercase;
@@ -205,14 +205,14 @@ main {
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
-  	text-decoration:none;
-	color:#fff;
+  text-decoration:none;
+  color:#fff;
   z-index: 1;
   }
 
 .menu a.active {
-	background-color:rgba(91,193,177,.75);
-	cursor:default;
+  background-color:rgba(91,193,177,.75);
+  cursor:default;
   }
 
 .menu a:before{
@@ -275,11 +275,11 @@ main {
 
 .menu:hover {
     z-index: 999;
-  }  
+}  
   
 .menu a:hover {
   background-color: #f1f1f1;
-  }
+}
 
 
 .menu-container:hover .menu {
@@ -379,7 +379,7 @@ main {
     max-width: 22rem;
     white-space: nowrap;
     animation: loading 5s alternate;
-  animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
   }
 @keyframes loading {
     0% {
@@ -436,8 +436,6 @@ main {
 .codepen-img:hover {
   bottom: 1rem;
   }
-
-
 
 @media (max-width: 1100px) {
 .github-img {
@@ -625,7 +623,7 @@ font {
 .name:hover{
   background-color: #DF1B76;
   border-bottom: 5px solid #B2175F;
-/*  background-size: .5px .5px; */
+/*      background-size: .5px .5px; */
   }
 .name:focus, .email:focus, .message:focus{
   outline: none;
@@ -633,7 +631,7 @@ font {
   }
 .email {
   border-bottom: 5px solid #502789;
-/*  background-image: url('https://imgur.com/IPeDAuP.png');
+/*      background-image: url('https://imgur.com/IPeDAuP.png');
 	background-size: 25px 25px;
 	background-position: 10px 5px;
 	background-repeat: no-repeat; */
@@ -641,15 +639,15 @@ font {
 .email:hover{
   background-color: #2014CB;
   border-bottom: 5px solid #18108E;
-/*  background-size: .5px .5px; */
+/*      background-size: .5px .5px; */
   }
 .message {
   font-family: 'Arial';
   border-bottom: 5px solid #1185C3;
- background-image: url('https://imgur.com/aNjz6g8.png');
-	background-size: 25px 25px;
-	background-position: 10px 5px;
-	background-repeat: no-repeat; 
+  background-image: url('https://imgur.com/aNjz6g8.png');
+  background-size: 25px 25px;
+  background-position: 10px 5px;
+  background-repeat: no-repeat; 
   overflow: hidden;
   height: 6rem;
   font-size: 1.5rem;
@@ -741,8 +739,6 @@ font {
     line-height: 20px;
   }
 }
-
-
 
 /*************************************ANIMATION**********************************/
 
