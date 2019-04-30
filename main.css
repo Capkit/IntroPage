@@ -583,7 +583,7 @@ main {
 
 @media (min-width: 1250px) {
   #skills .page-content {
-   margin-left: 
+   font-size: 1rem; 
 	}
 
 }
