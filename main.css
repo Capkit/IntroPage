@@ -733,14 +733,14 @@ font {
 
 .footer-wrapper {
   font-family: 'IBM Plex Mono', monospace, 'Arial';
-  font-size: .8rem;
+  font-size: .5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background: black;
   color: white;
   text-align: center;
-  height: 2rem;
+  height: 2vh;
   }
 
 @media (max-width: 210px) {
